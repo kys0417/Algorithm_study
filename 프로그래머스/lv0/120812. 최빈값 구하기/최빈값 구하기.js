@@ -8,5 +8,8 @@ function solution(array) {
     }
     obj = [...obj].sort((a,b) => b[1] - a[1]);
     return obj.length === 1 || obj[0][1] > obj[1][1] ? obj[0][0] : -1; 
-    
+    // obj의 length === 1인 경우 value값 출력 = obj[0][0]
+    // length가 1이 아닌 경우 오름차순 정렬한 obj의 value값 [0], [1] 비교
+    // [0]의 value가 [1]의 value가 크면 빈도수가 다르게 있다는 뜻이므로 [0]의 value값 출력
+    // 아닌 경우 최빈값이 여러개라는 뜻이므로 -1출력
 }
