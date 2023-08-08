@@ -9,5 +9,15 @@ function solution(rsp) {
     //     answer.push(rspArr[i]);
     // }
     // return rspArr.join("");
-    return [...rsp].map(v => v === "2" ? "0" : (v === "0" ? "5" : "2")).join("");
+    
+    // 풀이 2
+    // return [...rsp].map(v => v === "2" ? "0" : (v === "0" ? "5" : "2")).join("");
+    
+    // 풀이 3
+    let arr = {
+        2 : 0,
+        0 : 5,
+        5 : 2
+    };
+    return [...rsp].map(v => arr[v]).join("");
 }
